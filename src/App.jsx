@@ -1,8 +1,11 @@
-import React from 'react'
+import  Dog  from "./components/Dog.jsx"
+import "./App.css"
 
  const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Dog />
+    </>
   )
 }
 

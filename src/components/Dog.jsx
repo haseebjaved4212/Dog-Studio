@@ -1,8 +1,8 @@
-import {canvas } from "@react-three/fiber"
+import {Canvas } from "@react-three/fiber"
 
 const Dog = () => {
   return (
-    <canvas></canvas>
+    <Canvas></Canvas>
   )
 }
 
