@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body,
-html {
+html,#root {
     width: 100%;
     background-color: black;
 }
