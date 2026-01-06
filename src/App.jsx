@@ -5,9 +5,15 @@ import "./App.css"
  const App = () => {
   return (
     <>
+    <main>
     <Canvas>
       <Dog />
     </Canvas>
+    <section></section>
+    <section></section>
+    <section></section>
+    </main>
+      
     </>
   )
 }
