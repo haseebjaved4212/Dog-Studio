@@ -15,20 +15,22 @@ useThree(({camera, gl , scene }) => {
 
 const texture = useTexture({
     normalMap: "/dog_normals.jpg",
+    sampleMatCap : "/met-cap/mat-2.png",
     // normalScale: [0.1, 0.1],
 });
 
-// texture.normalMap.wrapS = THREE.RepeatWrapping;
-// texture.normalMap.wrapT = THREE.RepeatWrapping;
-// texture.normalMap.repeat.set(2, 2);
+
 texture.normalMap.flipY = false;
+
+
+
 
 model.scene.traverse((child) => {
     // console.log(child)
     if (child.name.includes("DOG")) {
         child.material = new THREE.MeshMatcapMaterial({
             normalMap: texture.normalMap,
-            color: "#ff0000",
+            matcap: texture.sampleMatCap,
         }) }
     });
     return (
