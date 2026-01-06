@@ -18,6 +18,11 @@ const texture = useTexture({
     // normalScale: [0.1, 0.1],
 });
 
+// texture.normalMap.wrapS = THREE.RepeatWrapping;
+// texture.normalMap.wrapT = THREE.RepeatWrapping;
+// texture.normalMap.repeat.set(2, 2);
+texture.normalMap.flipY = false;
+
 model.scene.traverse((child) => {
     // console.log(child)
     if (child.name.includes("DOG")) {
