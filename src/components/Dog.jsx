@@ -1,5 +1,7 @@
+import * as THREE from "three"
+
 import { Canvas , useThree} from "@react-three/fiber"
-import { OrbitControls, useGLTF } from "@react-three/drei"
+import { OrbitControls, useGLTF , useTexture } from "@react-three/drei"
 
 const Dog = () => {
 
@@ -11,8 +13,19 @@ useThree(({camera, gl , scene }) => {
    
 })
 
+const texture = useTexture({
+    normalMap: "/dog_normals.jpg",
+    // normalScale: [0.1, 0.1],
+});
 
-
+model.scene.traverse((child) => {
+    // console.log(child)
+    if (child.name.includes("DOG")) {
+        child.material = new THREE.MeshMatcapMaterial({
+            normalMap: texture.normalMap,
+            color: "#ff0000",
+        }) }
+    });
     return (
         <>
         <primitive object={model.scene} position={[0.25, -0.55, 0]} rotation={[0, Math.PI / 3.9, 0]} />
