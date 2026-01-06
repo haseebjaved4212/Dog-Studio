@@ -9,18 +9,24 @@ const model = useGLTF("/models/dog.drc.glb");
 
 useThree(({camera, gl , scene }) => {
     // console.log(camera.position)
-    camera.position.z = 0.6 
+    camera.position.z = 0.6 ;
+    gl.toneMapping = THREE.ReinhardToneMapping;
+    gl.outputColorSpace = THREE.SRGBColorSpace;
+
    
 })
 
 const texture = useTexture({
     normalMap: "/dog_normals.jpg",
     sampleMatCap : "/met-cap/mat-2.png",
+
     // normalScale: [0.1, 0.1],
 });
 
 
 texture.normalMap.flipY = false;
+texture.sampleMatCap.colorSpace = THREE.SRGBColorSpace;
+
 
 
 
