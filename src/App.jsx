@@ -1,30 +1,30 @@
-import  Dog  from "./components/Dog.jsx"
+import Dog from "./components/Dog.jsx"
 import { Canvas } from "@react-three/fiber"
 import "./App.css"
 
- const App = () => {
+const App = () => {
   return (
     <>
-    <main>
-    <Canvas style={{
-      height: "100vh",
-      width: "100vw",
-      position: "fixed",
-      top: 0,
-      left: 0,
-      zIndex: 1,
-      
+      <main>
+        <Canvas style={{
+          height: "100vh",
+          width: "100vw",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: 1,
+          backgroundImage: "url(/background-1.png)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
 
-    }
-      
-    }>
-      <Dog />
-    </Canvas>
-    <section></section>
-    <section></section>
-    <section></section>
-    </main>
-      
+        }}>
+          <Dog />
+        </Canvas>
+        <section></section>
+        <section></section>
+        <section></section>
+      </main >
+
     </>
   )
 }
