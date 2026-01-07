@@ -1,8 +1,26 @@
 import Dog from "./components/Dog.jsx"
 import { Canvas } from "@react-three/fiber"
 import "./App.css"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const App = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(gsap);
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <main>
@@ -20,9 +38,9 @@ const App = () => {
         }}>
           <Dog />
         </Canvas>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section id="section-1"></section>
+        <section id="section-2"></section>
+        <section id="section-3"></section>
       </main >
 
     </>

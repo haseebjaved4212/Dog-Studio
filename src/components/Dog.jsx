@@ -2,11 +2,20 @@ import * as THREE from "three"
 import { useEffect } from "react"
 import { Canvas, useThree } from "@react-three/fiber"
 import { OrbitControls, useGLTF, useTexture, useAnimations } from "@react-three/drei"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 
 const Dog = () => {
 
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(gsap);
+
+
     const model = useGLTF("/models/dog.drc.glb");
-    // const model = useGLTF("/models/dog.drc.glb");
+
 
     useThree(({ camera, gl, scene }) => {
         camera.position.z = 0.6;
@@ -16,7 +25,7 @@ const Dog = () => {
 
     })
 
-    const {actions } = useAnimations(model.animations, model.scene);
+    const { actions } = useAnimations(model.animations, model.scene);
 
     useEffect(() => {
         actions["Take 001"].play();
@@ -36,7 +45,7 @@ const Dog = () => {
     })
 
 
-    const dogMeterial  = new THREE.MeshMatcapMaterial({
+    const dogMeterial = new THREE.MeshMatcapMaterial({
         normalMap: normalMap,
         matcap: sampleMatCap,
     })
@@ -50,10 +59,24 @@ const Dog = () => {
         // console.log(child)
         if (child.name.includes("DOG")) {
             child.material = dogMeterial;
-        }else{
+        } else {
             child.material = brachesMeterial;
         }
     });
+    useGSAP(() =>{
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#section-1",
+                endTrigger: "#section-3",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+            }
+        })
+    })
+
+
+
     return (
         <>
             <primitive object={model.scene} position={[0.25, -0.55, 0]} rotation={[0, Math.PI / 3.9, 0]} />
