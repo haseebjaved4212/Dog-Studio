@@ -1,5 +1,5 @@
 import * as THREE from "three"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { Canvas, useThree } from "@react-three/fiber"
 import { OrbitControls, useGLTF, useTexture, useAnimations } from "@react-three/drei"
 import gsap from "gsap"
@@ -63,6 +63,8 @@ const Dog = () => {
             child.material = brachesMeterial;
         }
     });
+    const dogModel = useRef(model);
+
     useGSAP(() =>{
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -70,8 +72,14 @@ const Dog = () => {
                 endTrigger: "#section-3",
                 start: "top top",
                 end: "bottom bottom",
-                scrub: 1,
+                scrub: true,
+                markers: true,
             }
+        })
+        tl.to(dogModel.current.scene.position, {
+            z: "-=0.5",
+            y: "+=0.1",
+          
         })
     })
 
