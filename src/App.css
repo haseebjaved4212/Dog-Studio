@@ -17,13 +17,14 @@ main{
 }
 section{
   min-height: 100vh;
-  border : 1px solid white;
+  /* border : 1px solid white; */
   position: relative;
   z-index: 2;
 }
 
 #section-1{
   --gap: 3rem;
+  position: relative;
   
   nav{
     display: flex ;
@@ -85,4 +86,21 @@ section{
       }
      }
     }
-}
+    .first-line{
+    background-color: rgba(255, 0, 0, 0.331);
+    width: 6rem;
+    height: 0.3px;
+    position: absolute;
+    transform: rotate(50deg) translate(0, -6rem);
+   
+    }
+ .second-line{
+   background-color: rgba(255, 0, 0, 0.331);
+    width: 6rem;
+    height: 0.3px;
+    position: absolute;
+    transform: rotate(135deg);
+    top: 13%;
+    right: 16%;
+    } 
+} 

@@ -60,20 +60,20 @@ const App = () => {
               </svg>
             </div>
             <div className="nav-elem">
-             <i className="ri-arrow-right-s-line"></i> Our Show Reel 
+              <i className="ri-arrow-right-s-line"></i> Our Show Reel
             </div>
-             <div className="nav-elem">
+            <div className="nav-elem">
               <i className="ri-menu-3-fill"></i>
-              
+
             </div>
           </nav>
-                    <div className="middle">
+          <div className="middle">
             <div className="left">
               <h1>WE <br /> Make <br /> Good <br />Shit</h1>
             </div>
             <div className="right"></div>
           </div>
- <div className="bottom">
+          <div className="bottom">
             <div className="left"></div>
             <div className="right">
               <p>
@@ -83,6 +83,8 @@ const App = () => {
               </p>
             </div>
           </div>
+          <div className="first-line"></div>
+          <div className="second-line"></div>
         </section>
         <section id="section-2"></section>
         <section id="section-3"></section>
