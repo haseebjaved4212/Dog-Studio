@@ -73,7 +73,7 @@ const Dog = () => {
                 start: "top top",
                 end: "bottom bottom",
                 scrub: true,
-                markers: true,
+                // markers: true,
             }
         })
         tl.to(dogModel.current.scene.position, {
