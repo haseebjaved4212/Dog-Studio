@@ -60,7 +60,7 @@ const App = () => {
               </svg>
             </div>
             <div className="nav-elem">
-              <i className="ri-arrow-right-s-line"></i> Our Show Reel
+              <i className="ri-arrow-right-s-line"></i> Our showreel
             </div>
             <div className="nav-elem">
               <i className="ri-menu-3-fill"></i>
