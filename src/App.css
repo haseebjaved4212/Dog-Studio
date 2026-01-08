@@ -25,13 +25,18 @@ section{
 #section-1{
   nav{
     display: flex ;
+    font-size: 7px;
     align-items: center;
     justify-content: space-between;
     padding: 0.54rem 0.7rem;
     padding-top: 1rem;
 
-    .nav-elem::nth-child(2){
-      color: brown;
+    .nav-elem:nth-child(2){
+      
+      i{
+        color: red;
+      }
+      
     }
 
       
