@@ -86,7 +86,7 @@ const App = () => {
           <div className="first-line"></div>
           <div className="second-line"></div>
         </section>
-         <section id='section-2' >
+ <section id='section-2' >
           <div className="titles">
             <div img-title="tomorrowland" className="title">
               <small>2020 - ONGOING</small>
@@ -120,7 +120,6 @@ const App = () => {
 
 
         </section>
-        {/* <section id="section-2"></section> */}
         <section id="section-3"></section>
       </main >
 

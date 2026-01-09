@@ -111,25 +111,34 @@ section{
 
     display: flex;
     flex-direction: column;
-    padding-left: 7rem;
+    padding-left: 8%;
   }
 
   .title{
     display: flex;
     gap: 1.5rem;
-    opacity: 0.5;
+    opacity: 0.4;
     padding-block: 0.5rem ;
+     transition: all 0.3s linear;
 
+
+  }
+  .title:hover{
+    opacity: 1;
+    cursor: pointer;
   }
   small{
     margin-top: 0.1rem;
     font-size: 0.2rem;
     letter-spacing: 1;
+    text-align: end;
   }
   h1{
     font-size: 1rem;
     font-weight: 100;
     line-height: 1;
+    text-align: end;
 
   }
 }
+
