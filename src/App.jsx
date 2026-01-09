@@ -9,18 +9,6 @@ const App = () => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(gsap);
 
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <>
       <main>
