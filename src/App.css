@@ -105,3 +105,31 @@ section{
  
     } 
 } 
+
+#section-2{
+  .titles{
+
+    display: flex;
+    flex-direction: column;
+    padding-left: 7rem;
+  }
+
+  .title{
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0.5;
+    padding-block: 0.5rem ;
+
+  }
+  small{
+    margin-top: 0.1rem;
+    font-size: 0.2rem;
+    letter-spacing: 1;
+  }
+  h1{
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1;
+
+  }
+}
