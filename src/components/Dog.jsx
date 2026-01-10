@@ -65,26 +65,26 @@ const [
         mat19,
         mat20
     ] = (useTexture([
-        "/matcap/mat-1.png",
-        "/matcap/mat-2.png",
-        "/matcap/mat-3.png",
-        "/matcap/mat-4.png",
-        "/matcap/mat-5.png",
-        "/matcap/mat-6.png",
-        "/matcap/mat-7.png",
-        "/matcap/mat-8.png",
-        "/matcap/mat-9.png",
-        "/matcap/mat-10.png",
-        "/matcap/mat-11.png",
-        "/matcap/mat-12.png",
-        "/matcap/mat-13.png",
-        "/matcap/mat-14.png",
-        "/matcap/mat-15.png",
-        "/matcap/mat-16.png",
-        "/matcap/mat-17.png",
-        "/matcap/mat-18.png",
-        "/matcap/mat-19.png",
-        "/matcap/mat-20.png",
+        "/met-cap/mat-1.png",
+        "/met-cap/mat-2.png",
+        "/met-cap/mat-3.png",
+        "/met-cap/mat-4.png",
+        "/met-cap/mat-5.png",
+        "/met-cap/mat-6.png",
+        "/met-cap/mat-7.png",
+        "/met-cap/mat-8.png",
+        "/met-cap/mat-9.png",
+        "/met-cap/mat-10.png",
+        "/met-cap/mat-11.png",
+        "/met-cap/mat-12.png",
+        "/met-cap/mat-13.png",
+        "/met-cap/mat-14.png",
+        "/met-cap/mat-15.png",
+        "/met-cap/mat-16.png",
+        "/met-cap/mat-17.png",
+        "/met-cap/mat-18.png",
+        "/met-cap/mat-19.png",
+        "/met-cap/mat-20.png",
     ])).map(texture => {
         texture.colorSpace = THREE.SRGBColorSpace
         return texture
@@ -92,7 +92,7 @@ const [
 
     const dogMeterial = new THREE.MeshMatcapMaterial({
         normalMap: normalMap,
-        matcap: sampleMatCap,
+        matcap: mat2,
     })
 
     const brachesMeterial = new THREE.MeshMatcapMaterial({
@@ -132,7 +132,7 @@ const [
         )
     }
 
-    dogMaterial.onBeforeCompile = onBeforeCompile
+    // dogMaterial.onBeforeCompile = onBeforeCompile
 
 
     model.scene.traverse((child) => {
