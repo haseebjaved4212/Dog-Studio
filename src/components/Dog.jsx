@@ -89,7 +89,11 @@ const [
         texture.colorSpace = THREE.SRGBColorSpace
         return texture
     })
-
+ const material = useRef({
+        uMatcap1: { value: mat19 },
+        uMatcap2: { value: mat2 },
+        uProgress: { value: 1.0 }
+    })
     const dogMeterial = new THREE.MeshMatcapMaterial({
         normalMap: normalMap,
         matcap: mat2,
