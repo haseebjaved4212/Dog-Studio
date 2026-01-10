@@ -154,3 +154,6 @@ section{
   }
 }
 
+main:has(#section-2 .title:hover) #canvas-elem::after{
+  opacity: 0;
+}
