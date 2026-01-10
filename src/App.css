@@ -157,3 +157,27 @@ section{
 main:has(#section-2 .title:hover) #canvas-elem::after{
   opacity: 0;
 }
+
+
+.images {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+
+ }
