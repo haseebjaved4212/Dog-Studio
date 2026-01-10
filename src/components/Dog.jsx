@@ -54,6 +54,41 @@ const Dog = () => {
         normalMap: brachesNormal,
         map: brachesDiffuse,
     })
+    
+    function onBeforeCompile(shader) {
+        shader.uniforms.uMatcapTexture1 = material.current.uMatcap1
+        shader.uniforms.uMatcapTexture2 = material.current.uMatcap2
+        shader.uniforms.uProgress = material.current.uProgress
+
+        // Store reference to shader uniforms for GSAP animation
+
+        shader.fragmentShader = shader.fragmentShader.replace(
+            "void main() {",
+            `
+        uniform sampler2D uMatcapTexture1;
+        uniform sampler2D uMatcapTexture2;
+        uniform float uProgress;
+
+        void main() {
+        `
+        )
+
+        shader.fragmentShader = shader.fragmentShader.replace(
+            "vec4 matcapColor = texture2D( matcap, uv );",
+            `
+          vec4 matcapColor1 = texture2D( uMatcapTexture1, uv );
+          vec4 matcapColor2 = texture2D( uMatcapTexture2, uv );
+          float transitionFactor  = 0.2;
+          
+          float progress = smoothstep(uProgress - transitionFactor,uProgress, (vViewPosition.x+vViewPosition.y)*0.5 + 0.5);
+
+          vec4 matcapColor = mix(matcapColor2, matcapColor1, progress );
+        `
+        )
+    }
+
+    dogMaterial.onBeforeCompile = onBeforeCompile
+
 
     model.scene.traverse((child) => {
         // console.log(child)
