@@ -43,7 +43,52 @@ const Dog = () => {
         texture.colorSpace = THREE.SRGBColorSpace;
         return texture;
     })
-
+const [
+        mat1,
+        mat2,
+        mat3,
+        mat4,
+        mat5,
+        mat6,
+        mat7,
+        mat8,
+        mat9,
+        mat10,
+        mat11,
+        mat12,
+        mat13,
+        mat14,
+        mat15,
+        mat16,
+        mat17,
+        mat18,
+        mat19,
+        mat20
+    ] = (useTexture([
+        "/matcap/mat-1.png",
+        "/matcap/mat-2.png",
+        "/matcap/mat-3.png",
+        "/matcap/mat-4.png",
+        "/matcap/mat-5.png",
+        "/matcap/mat-6.png",
+        "/matcap/mat-7.png",
+        "/matcap/mat-8.png",
+        "/matcap/mat-9.png",
+        "/matcap/mat-10.png",
+        "/matcap/mat-11.png",
+        "/matcap/mat-12.png",
+        "/matcap/mat-13.png",
+        "/matcap/mat-14.png",
+        "/matcap/mat-15.png",
+        "/matcap/mat-16.png",
+        "/matcap/mat-17.png",
+        "/matcap/mat-18.png",
+        "/matcap/mat-19.png",
+        "/matcap/mat-20.png",
+    ])).map(texture => {
+        texture.colorSpace = THREE.SRGBColorSpace
+        return texture
+    })
 
     const dogMeterial = new THREE.MeshMatcapMaterial({
         normalMap: normalMap,
