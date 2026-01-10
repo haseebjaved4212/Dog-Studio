@@ -122,15 +122,18 @@ const App = () => {
               <h3>
                 We are crafting <br />
                 emotional <br />
-                experience aimed <br />
+                experience aimed at <br />
 
-                at  <br />
+                 improving <br />
                 results
               </h3>
             </div>
             <div className="right"></div>
           </div>
-          <div className="bottom">
+          
+        </section>
+        <section id="section-4">
+         <div className="bottom">
             <div className="left">
 
             </div>
@@ -141,7 +144,7 @@ const App = () => {
               </p>
               <p>
                 Dogstudio is a design & technology firm working globally from our offices based in Belgium and Chicago.
-                Our strong focus on producing high quality & emotional brandings, digital products and experiences became a signature
+                Our strong focus on producing high quality & emotional brandings, and Many more
               </p>
             </div>
           </div>
