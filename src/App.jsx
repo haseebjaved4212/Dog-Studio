@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <main>
-          <div className="images">
+        <div className="images">
           <img id='tomorrowland' src="/tommorowland.png" alt="" />
           <img id='navy-pier' src="/navy-pier.png" alt="" />
           <img id='msi-chicago' src="/msi-chicago.png" alt="" />
@@ -21,16 +21,16 @@ const App = () => {
           <img id='kennedy' src="/kennedy.png" alt="" />
           <img id='opera' src="/opera.png" alt="" />
         </div>
-        <Canvas 
-        id="canvas-elem"
-        style={{
-          height: "100vh",
-          width: "100vw",
-          position: "fixed",
-          top: 0,
-          left: 0,
-          zIndex: 1,
-        }}>
+        <Canvas
+          id="canvas-elem"
+          style={{
+            height: "100vh",
+            width: "100vw",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: 1,
+          }}>
           <Dog />
         </Canvas>
         <section id="section-1">
@@ -81,7 +81,7 @@ const App = () => {
           <div className="first-line"></div>
           <div className="second-line"></div>
         </section>
- <section id='section-2' >
+        <section id='section-2' >
           <div className="titles">
             <div img-title="tomorrowland" className="title">
               <small>2020 - ONGOING</small>
@@ -115,7 +115,36 @@ const App = () => {
 
 
         </section>
-        <section id="section-3"></section>
+        <section id="section-3">
+
+          <div className="top">
+            <div className="left">
+              <h3>
+                We are crafting <br />
+                emotional <br />
+                experience aimed <br />
+                at improving <br />
+                results
+              </h3>
+            </div>
+            <div className="right"></div>
+          </div>
+          <div className="bottom">
+            <div className="left">
+
+            </div>
+            <div className="right">
+              <p>
+                Dogstudio is a design & technology firm working globally from our offices based in Belgium and Chicago.
+                Our strong focus on producing high quality & emotional brandings, digital products and experiences became a signature
+              </p>
+              <p>
+                Dogstudio is a design & technology firm working globally from our offices based in Belgium and Chicago.
+                Our strong focus on producing high quality & emotional brandings, digital products and experiences became a signature
+              </p>
+            </div>
+          </div>
+        </section>
       </main >
 
     </>

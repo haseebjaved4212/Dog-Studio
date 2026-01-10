@@ -179,7 +179,7 @@ const Dog = () => {
             .to(dogModel.current.scene.position, {
                 x: "-=0.5",
                 z: "+=0.6",
-                y: "-=0.05"
+                y: "-=0.08"
             }, "third")
 
     }, [])
