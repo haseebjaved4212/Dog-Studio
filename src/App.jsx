@@ -123,7 +123,8 @@ const App = () => {
                 We are crafting <br />
                 emotional <br />
                 experience aimed <br />
-                at improving <br />
+
+                at  <br />
                 results
               </h3>
             </div>
