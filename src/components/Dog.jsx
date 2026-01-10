@@ -32,10 +32,10 @@ const Dog = () => {
     }, [actions]);
 
     const [
-        normalMap, sampleMatCap, brachesDiffuse, brachesNormal
+        normalMap, brachesDiffuse, brachesNormal
     ] = (useTexture([
         "/dog_normals.jpg",
-        "/met-cap/mat-2.png",
+       
         "/branches_diffuse.jpg",
         "/branches_normals.jpg",
     ])).map(texture => {
