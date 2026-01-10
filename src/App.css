@@ -1,26 +1,30 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body,
 html,
 #root {
-    width: 100%;
-    /* height: 100%; */
-    background-color: black;
-    color: whitesmoke;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  /* height: 100%; */
+  background-color: black;
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-main{
+
+main {
   position: relative;
 }
-section{
+
+section {
   min-height: 100vh;
   /* border : 1px solid white; */
   position: relative;
   z-index: 2;
 }
+
 #canvas-elem::after {
   content: "";
   height: 100%;
@@ -34,118 +38,135 @@ section{
   background-size: cover;
   transition: all 0.3s linear;
 }
-#section-1{
+
+#section-1 {
   --gap: 3rem;
   position: relative;
-  
-  nav{
-    display: flex ;
+
+  nav {
+    display: flex;
     /* font-size: 5px; */
     align-items: center;
     justify-content: space-between;
     padding: 0.54rem 0.7rem;
     padding-top: 1rem;
 
-    .nav-elem:nth-child(2){
+    .nav-elem:nth-child(2) {
       font-size: 5px;
-      i{
+
+      i {
         color: red;
       }
-      
+
     }
-.nav-elem{
-  font-size: 5px;
-}
-      
-    
-    svg{
+
+    .nav-elem {
+      font-size: 5px;
+    }
+
+
+    svg {
       max-width: 2rem;
       width: 100%;
       height: 100%;
     }
   }
-  .middle{
+
+  .middle {
     padding: 1rem;
     display: flex;
     gap: var(--gap);
-    .left, .right{
-     width: 50%;
-  
-      }
-      .left{
-        display: flex;
-        align-items: center;
-        justify-content: end;
-      }
-      h1{
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 0.8;
-        text-align: right;
-      }
-    }
-    .bottom{
-      display: flex;
-      gap: var(--gap);
-     .left, .right{
+
+    .left,
+    .right {
       width: 50%;
-     }
-     .right{
-      p{
+
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+
+    h1 {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 0.8;
+      text-align: right;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    gap: var(--gap);
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .right {
+      p {
         font-size: 5px;
         font-weight: 100;
         line-height: 1.5;
       }
-     }
     }
-    .first-line{
+  }
+
+  .first-line {
     background-color: rgba(255, 0, 0, 0.331);
     width: 6rem;
     height: 0.3px;
     position: absolute;
     transform: rotate(50deg) translate(0, -6rem);
-   
-    }
- .second-line{
-   background-color: rgba(255, 0, 0, 0.331);
+
+  }
+
+  .second-line {
+    background-color: rgba(255, 0, 0, 0.331);
     width: 2rem;
     height: 0.3px;
     position: absolute;
     transform: rotate(135deg);
     top: 26%;
     right: 16%;
- 
-    } 
-} 
 
-#section-2{
-  .titles{
+  }
+}
+
+#section-2 {
+  .titles {
 
     display: flex;
     flex-direction: column;
     padding-left: 8%;
   }
 
-  .title{
+  .title {
     display: flex;
     gap: 1.5rem;
     opacity: 0.4;
-    padding-block: 0.5rem ;
-     transition: all 0.3s linear;
+    padding-block: 0.5rem;
+    transition: all 0.3s linear;
 
 
   }
-  .title:hover{
+
+  .title:hover {
     opacity: 1;
     cursor: pointer;
   }
-  small{
+
+  small {
     margin-top: 0.1rem;
     font-size: 0.2rem;
     letter-spacing: 1;
-   
+
   }
-  h1{
+
+  h1 {
     font-size: 1rem;
     font-weight: 100;
     line-height: 1;
@@ -154,7 +175,7 @@ section{
   }
 }
 
-main:has(#section-2 .title:hover) #canvas-elem::after{
+main:has(#section-2 .title:hover) #canvas-elem::after {
   opacity: 0;
 }
 
@@ -165,9 +186,9 @@ main:has(#section-2 .title:hover) #canvas-elem::after{
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
+  /* z-index: 2; */
 
-  
+
   img {
     height: 100%;
     width: 100%;
@@ -180,4 +201,39 @@ main:has(#section-2 .title:hover) #canvas-elem::after{
   }
 
 
- }
+}
+
+main:has(#section-2 .title[img-title="tomorrowland"]:hover) .images #tomorrowland {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .title[img-title="navy-pier"]:hover) .images #navy-pier {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .title[img-title="msi-chicago"]:hover) .images #msi-chicago {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .title[img-title="phone"]:hover) .images #phone {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .title[img-title="kikk"]:hover) .images #kikk {
+  opacity: 1;
+  background-color: rgba(1, 15, 92, 0.679);
+}
+
+main:has(#section-2 .title[img-title="kennedy"]:hover) .images #kennedy {
+  opacity: 1;
+  background-color: rgb(4, 7, 24);
+}
+
+main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
+  opacity: 1;
+  background-color: rgb(176, 4, 4);
+}
