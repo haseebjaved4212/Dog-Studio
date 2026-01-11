@@ -5,6 +5,8 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import Footer from "./components/Footer.jsx";
+
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(gsap);
@@ -12,6 +14,7 @@ const App = () => {
   return (
     <>
       <main>
+        {/* ... existing content ... */}
         <div className="images">
           <img id='tomorrowland' src="/tommorowland.png" alt="" />
           <img id='navy-pier' src="/navy-pier.png" alt="" />
@@ -124,16 +127,16 @@ const App = () => {
                 emotional <br />
                 experience aimed at <br />
 
-                 improving <br />
+                improving <br />
                 results
               </h3>
             </div>
             <div className="right"></div>
           </div>
-          
+
         </section>
         <section id="section-4">
-         <div className="bottom">
+          <div className="bottom">
             <div className="left">
 
             </div>
@@ -149,10 +152,11 @@ const App = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </main >
-
     </>
   )
 }
+
 
 export default App
