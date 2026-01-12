@@ -1,16 +1,92 @@
-# React + Vite
+# Dog Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive portfolio website for **Dogstudio**, a multidisciplinary creative studio at the intersection of art, design, and technology. This project showcases immersive 3D elements, smooth animations, and a clean, high-performance UI.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Immersive 3D Experience:** Features a realistic, interactive 3D dog model rendered using **React Three Fiber**.
+*   **Smooth Animations:** Powered by **GSAP (GreenSock Animation Platform)** with ScrollTrigger for engaging scroll-based interactions.
+*   **Dynamic Showcase:** Interactive project list highlighting key works like Tomorrowland, Navy Pier, and MSI Chicago.
+*   **Modern Design:** fully responsive layout with a focus on aesthetics and user experience.
+*   **High Performance:** Built with **Vite** for lightning-fast development and optimized production builds.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is built using the following technologies:
 
-## Expanding the ESLint configuration
+*   **Core:** [React 19](https://react.dev/), [Vite](https://vitejs.dev/)
+*   **3D Graphics:** [Three.js](https://threejs.org/), [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/), [Drei](https://github.com/pmndrs/drei)
+*   **Animations:** [GSAP](https://gsap.com/)
+*   **Icons:** [Remix Icon](https://remixicon.com/)
+*   **Styling:** CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation
+
+To get this project running locally on your machine, follow these steps:
+
+1.  **Clone the repository** (if applicable) or download the source code.
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd "Dog Studio"
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+## 🖥️ Usage
+
+### Development Server
+Start the local development server with hot-reloading:
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173`.
+
+### Production Build
+Build the project for production:
+```bash
+npm run build
+```
+
+### Preview Production Build
+Preview the built application locally:
+```bash
+npm run preview
+```
+
+### Linting
+Run the linter to catch errors and enforce code style:
+```bash
+npm run lint
+```
+
+## 📂 Project Structure
+
+```
+Dog Studio/
+├── public/              # Static assets (images, models)
+├── src/
+│   ├── assets/          # Source assets
+│   ├── components/      # Reusable UI components
+│   │   ├── Dog.jsx      # 3D Dog model component
+│   │   └── Footer.jsx   # Page footer component
+│   ├── App.css          # Global styles
+│   ├── App.jsx          # Main application component
+│   └── main.jsx         # Entry point
+├── .eslintrc.cjs        # ESLint configuration
+├── index.html           # HTML entry point
+├── package.json         # Dependencies and scripts
+└── vite.config.js       # Vite configuration
+```
+
+## 📄 License
+
+This project is for educational and portfolio purposes. All rights reserved by the original creators.
+
+
+---
+
+<h3 align="center">Happy Coding ❤️</h3>
