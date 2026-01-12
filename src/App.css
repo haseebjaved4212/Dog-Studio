@@ -334,9 +334,29 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
   height: 2rem;
   background-color: black;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
   padding-top: 5rem;
+  justify-content: space-between;
+
+  .left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+.right {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+  
+    
+
+    i{
+      font-size: 0.3rem;
+      padding: 10px 10px;
+      opacity: 0.5;
+
+    }
+  }
 
   h1 {
     font-size: 1rem;
