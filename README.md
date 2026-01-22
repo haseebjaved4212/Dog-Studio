@@ -67,19 +67,58 @@ npm run lint
 
 ```
 Dog Studio/
-├── public/              # Static assets (images, models)
-├── src/
-│   ├── assets/          # Source assets
-│   ├── components/      # Reusable UI components
-│   │   ├── Dog.jsx      # 3D Dog model component
-│   │   └── Footer.jsx   # Page footer component
-│   ├── App.css          # Global styles
-│   ├── App.jsx          # Main application component
-│   └── main.jsx         # Entry point
-├── .eslintrc.cjs        # ESLint configuration
-├── index.html           # HTML entry point
-├── package.json         # Dependencies and scripts
-└── vite.config.js       # Vite configuration
+├── public
+    ├── kikk.png
+    ├── kennedy.png
+    ├── opera.png
+    ├── phone.png
+    ├── navy-pier.png
+    ├── background-1.png
+    ├── dog_normals.jpg
+    ├── msi-chicago.png
+    ├── tommorowland.png
+    ├── met-cap
+    │   ├── mat-1.png
+    │   ├── mat-10.png
+    │   ├── mat-11.png
+    │   ├── mat-12.png
+    │   ├── mat-13.png
+    │   ├── mat-14.png
+    │   ├── mat-15.png
+    │   ├── mat-16.png
+    │   ├── mat-17.png
+    │   ├── mat-18.png
+    │   ├── mat-19.png
+    │   ├── mat-2.png
+    │   ├── mat-20.png
+    │   ├── mat-3.png
+    │   ├── mat-4.png
+    │   ├── mat-5.png
+    │   ├── mat-6.png
+    │   ├── mat-7.png
+    │   ├── mat-8.png
+    │   ├── mat-9.png
+    │   └── sample.png
+    ├── models
+    │   └── dog.drc.glb
+    ├── branches_diffuse.jpg
+    ├── branches_normals.jpg
+    └── vite.svg
+├── vite.config.js
+├── src
+    ├── main.jsx
+    ├── components
+    │   ├── Footer.jsx
+    │   └── Dog.jsx
+    ├── assets
+    │   └── react.svg
+    ├── App.css
+    └── App.jsx
+├── .gitignore
+├── index.html
+├── eslint.config.js
+├── package.json
+└── README.md
 ```
 
 ## 📄 License
